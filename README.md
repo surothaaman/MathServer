@@ -5,9 +5,8 @@
 To design a website to find total surface area of a square prism in server side.
 
 ## FORMULA:
-Total Surface Area = 2b<sup>2</sup> + 4bh
-<br>b --> Base of Square Prism
-<br>h --> Height of Square Prism
+![image](https://github.com/surothaaman/MathServer/assets/133313653/a936e047-697a-4141-a81a-f9151722af87)
+
 
 ## DESIGN STEPS:
 
@@ -35,65 +34,78 @@ MATH.HTML
 ```
 <html>
 <head>
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<title>Area of Rectangle</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<style type="text/css">
-body 
-{
-background-color:red;
-}
-.edge {
-width: 1440px;
-margin-left: auto;
-margin-right: auto;
-padding-top: 250px;
-padding-left: 300px;
-}
-.box {
-display:block;
-border: Thick dashed lime;
-width: 500px;
-min-height: 300px;
-font-size: 20px;
-background-color:blue;
-}
-.formelt{
-color:orange;
-text-align: center;
-margin-top: 7px;
-margin-bottom: 6px;
-}
-h1
-{
-color:rgb(255, 0, 179);
-text-align: center;
-padding-top: 20px;
-}
-</style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Area of Square Prism</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+        body {
+            background-color: black;
+            margin: 0; /* Add this to remove default body margin */
+        }
+    
+        .edge {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .box {
+            display: block;
+            width: 500px;
+            min-height: 300px;
+            font-size: 20px;
+            background: rgb(0, 255, 60); /* Change the background color to green */
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    
+        .formelt {
+            color: black;
+            text-align: center;
+            margin-top: 7px;
+            margin-bottom: 6px;
+        }
+    
+        h1 {
+            color: black;
+            text-align: center;
+            padding-top: 20px;
+        }
+    
+        input {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+    
 </head>
+
 <body>
-<div class="edge">
-<div class="box">
-<h1>Area of a Rectangle</h1>
-<form method="POST">
-{% csrf_token %}
-<div class="formelt">
-Length : <input type="text" name="length" value="{{l}}"></input>(in m)<br/>
-</div>
-<div class="formelt">
-Breadth : <input type="text" name="breadth" value="{{b}}"></input>(in m)<br/>
-</div>
-<div class="formelt">
-<input type="submit" value="Calculate"></input><br/>
-</div>
-<div class="formelt">
-Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/>
-</div>
-</form>
-</div>
-</div>
+    <div class="edge">
+        <div class="box">
+            <h1>Area of a Square Prism</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="formelt">
+                    Side : <input type="text" name="length" value="{{l}}"></input>(in m)<br />
+                </div>
+                <div class="formelt">
+                    Height : <input type="text" name="breadth" value="{{b}}"></input>(in m)<br />
+                </div>
+                <div class="formelt">
+                    <input type="submit" value="Calculate"></input><br />
+                </div>
+                <div class="formelt">
+                    Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br />
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 ```
@@ -134,9 +146,11 @@ def rectarea(request):
 
 ## SERVER SIDE PROCESSING:
 
-![Alt text](<Screenshot (95).png>)
+![Screenshot (95)](https://github.com/surothaaman/MathServer/assets/133313653/3b732801-2ea4-4aa7-982d-01fc9a40e346)
+
 ## HOMEPAGE:
-![Alt text](<Screenshot (94).png>)
+![Screenshot (94)](https://github.com/surothaaman/MathServer/assets/133313653/44ae90ee-244f-4b17-ba81-3f9b83bb97bc)
+
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
